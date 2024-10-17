@@ -27,7 +27,7 @@ Project maintainers are responsible for upholding the code of conduct and may ta
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [your-email@example.com]. All complaints will be reviewed and investigated.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [trm97713@gmail.com]. All complaints will be reviewed and investigated.
 
 ## Attribution
 
