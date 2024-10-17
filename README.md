@@ -103,11 +103,11 @@ To set up this project locally, follow these steps:
 
 ## Contributing
 
-We welcome contributions! Please read our Contributing Guidelines for information on how to contribute.
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for information on how to contribute.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
