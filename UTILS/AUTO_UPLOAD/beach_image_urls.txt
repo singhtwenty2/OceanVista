@@ -1,0 +1,162 @@
+[Gokarna beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach3.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach4.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach6.jpeg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach2.webp
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach5.webp
+Catalog 6 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach4.webp
+
+[Elephant beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach3.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach6.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach4.png
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach5.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach2.avif
+
+[Baga beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach2.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach3.webp
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach6.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach5.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach4.webp
+
+[Cherai beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach2.webp
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach4.webp
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach3.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach6.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach5.jpeg
+
+[Puri beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach5.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach2.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach4.avif
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach3.jpeg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach6.jpeg
+
+[Dhanushkodi beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach1.webp
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach2.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach3.avif
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach5.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach6.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach4.webp
+
+[Kaup beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach6.webp
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach3.jpeg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach5.jpeg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach2.webp
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach4.jpg
+
+[Vagator beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach3.webp
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach2.jpeg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach6.webp
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach4.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach5.jpg
+
+[Calangute beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach1.webp
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach5.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach3.webp
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach2.webp
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach4.jpeg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach6.webp
+
+[Om beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach4.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach3.avif
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach6.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach2.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach5.webp
+
+[Radhanagar beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach1.jpeg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach6.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach4.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach5.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach2.webp
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach3.jpg
+
+[Rishikonda beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach3.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach5.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach4.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach3.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach2.jpg
+Catalog 6 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach6.jpeg
+
+[Minicoy island beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach6.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach3.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach2.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach4.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach5.jpeg
+
+[Auroville beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach1.webp
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach3.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach6.jpeg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach2.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach4.jpeg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach5.jpeg
+
+[Palolem beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach6.webp
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach2.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach4.webp
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach5.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach3.webp
+
+[Mahabalipuram beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach1.webp
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach6.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach5.jpeg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach4.jpeg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach3.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach2.jpg
+
+[Kovalam beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach2.webp
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach6.jpeg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach4.avif
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach5.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach3.jpg
+
+[Juhu beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach4.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach3.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach2.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach5.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach6.jpg
+
+[Anjuna beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach3.jpg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach2.jpg
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach6.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach5.webp
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach4.jpg
+
+[Nagoa beach Beach]
+Cover Photo URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach1.jpg
+Catalog 1 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach3.jpeg
+Catalog 2 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach4.avif
+Catalog 3 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach2.jpg
+Catalog 4 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach6.jpg
+Catalog 5 URL = https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach5.jpeg
+
