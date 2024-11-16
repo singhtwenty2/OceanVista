@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Calangute Beach",
+    "region": "Goa",
+    "coordinates": { "latitude": 15.5439, "longitude": 73.7553 }
+  },
+  {
+    "id": 2,
+    "name": "Baga Beach",
+    "region": "Goa",
+    "coordinates": { "latitude": 15.5523, "longitude": 73.7517 }
+  },
+  {
+    "id": 3,
+    "name": "Palolem Beach",
+    "region": "Goa",
+    "coordinates": { "latitude": 15.0100, "longitude": 74.0230 }
+  },
+  {
+    "id": 4,
+    "name": "Anjuna Beach",
+    "region": "Goa",
+    "coordinates": { "latitude": 15.5783, "longitude": 73.7437 }
+  },
+  {
+    "id": 5,
+    "name": "Vagator Beach",
+    "region": "Goa",
+    "coordinates": { "latitude": 15.5994, "longitude": 73.7369 }
+  },
+  {
+    "id": 6,
+    "name": "Kaup Beach",
+    "region": "Mangaluru, Karnataka",
+    "coordinates": { "latitude": 13.2120, "longitude": 74.7480 }
+  },
+  {
+    "id": 7,
+    "name": "Radhanagar Beach",
+    "region": "Havelock Island, Andaman and Nicobar Islands",
+    "coordinates": { "latitude": 11.9796, "longitude": 92.9876 }
+  },
+  {
+    "id": 8,
+    "name": "Kovalam Beach",
+    "region": "Kerala",
+    "coordinates": { "latitude": 8.4006, "longitude": 76.9784 }
+  },
+  {
+    "id": 9,
+    "name": "Cherai Beach",
+    "region": "Kerala",
+    "coordinates": { "latitude": 10.1015, "longitude": 76.1926 }
+  },
+  {
+    "id": 10,
+    "name": "Om Beach",
+    "region": "Gokarna, Karnataka",
+    "coordinates": { "latitude": 14.5155, "longitude": 74.3112 }
+  },
+  {
+    "id": 11,
+    "name": "Gokarna Beach",
+    "region": "Karnataka",
+    "coordinates": { "latitude": 14.5500, "longitude": 74.3180 }
+  },
+  {
+    "id": 12,
+    "name": "Puri Beach",
+    "region": "Odisha",
+    "coordinates": { "latitude": 19.7983, "longitude": 85.8249 }
+  },
+  {
+    "id": 13,
+    "name": "Dhanushkodi Beach",
+    "region": "Tamil Nadu",
+    "coordinates": { "latitude": 9.2305, "longitude": 79.3392 }
+  },
+  {
+    "id": 14,
+    "name": "Elephant Beach",
+    "region": "Havelock Island, Andaman",
+    "coordinates": { "latitude": 12.0016, "longitude": 93.0182 }
+  },
+  {
+    "id": 15,
+    "name": "Juhu Beach",
+    "region": "Mumbai, Maharashtra",
+    "coordinates": { "latitude": 19.0974, "longitude": 72.8266 }
+  },
+  {
+    "id": 16,
+    "name": "Mahabalipuram Beach",
+    "region": "Tamil Nadu",
+    "coordinates": { "latitude": 12.6208, "longitude": 80.1918 }
+  },
+  {
+    "id": 17,
+    "name": "Auroville Beach",
+    "region": "Pondicherry",
+    "coordinates": { "latitude": 12.0123, "longitude": 79.8577 }
+  },
+  {
+    "id": 18,
+    "name": "Nagoa Beach",
+    "region": "Diu",
+    "coordinates": { "latitude": 20.7013, "longitude": 70.8906 }
+  },
+  {
+    "id": 19,
+    "name": "Rishikonda Beach",
+    "region": "Visakhapatnam, Andhra Pradesh",
+    "coordinates": { "latitude": 17.7726, "longitude": 83.3770 }
+  },
+  {
+    "id": 20,
+    "name": "Minicoy Island Beach",
+    "region": "Lakshadweep",
+    "coordinates": { "latitude": 8.2842, "longitude": 73.0489 }
+  }
+]

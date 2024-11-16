@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": "Gokarna beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach4.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Gokarna%20Beach6.jpeg",
@@ -15,8 +15,8 @@
     {
         "id": 2,
         "name": "Elephant beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach6.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Elephant%20Beach4.png",
@@ -27,8 +27,8 @@
     {
         "id": 3,
         "name": "Baga beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach2.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach3.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Baga%20Beach6.jpg",
@@ -39,8 +39,8 @@
     {
         "id": 4,
         "name": "Cherai beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach2.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach4.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Cherai%20Beach3.jpg",
@@ -51,8 +51,8 @@
     {
         "id": 5,
         "name": "Puri beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach5.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach2.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Puri%20Beach4.avif",
@@ -63,8 +63,8 @@
     {
         "id": 6,
         "name": "Dhanushkodi beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach1.webp",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach1.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach2.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach3.avif",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Dhanushkodi%20Beach5.jpg",
@@ -75,8 +75,8 @@
     {
         "id": 7,
         "name": "Kaup beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach6.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach3.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kaup%20Beach5.jpeg",
@@ -87,8 +87,8 @@
     {
         "id": 8,
         "name": "Vagator beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach3.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach2.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Vagator%20Beach6.webp",
@@ -99,8 +99,8 @@
     {
         "id": 9,
         "name": "Calangute beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach1.webp",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach1.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach5.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach3.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Calangute%20Beach2.webp",
@@ -111,8 +111,8 @@
     {
         "id": 10,
         "name": "Om beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach4.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach3.avif",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Om%20Beach6.jpg",
@@ -123,8 +123,8 @@
     {
         "id": 11,
         "name": "Radhanagar beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach1.jpeg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach1.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach6.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach4.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Radhanagar%20Beach5.jpg",
@@ -135,8 +135,8 @@
     {
         "id": 12,
         "name": "Rishikonda beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach3.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach5.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Rishikonda%20Beach4.jpg",
@@ -148,8 +148,8 @@
     {
         "id": 13,
         "name": "Minicoy island beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach6.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Minicoy%20Island%20Beach2.jpg",
@@ -160,8 +160,8 @@
     {
         "id": 14,
         "name": "Auroville beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach1.webp",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach1.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach6.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Auroville%20Beach2.jpg",
@@ -172,8 +172,8 @@
     {
         "id": 15,
         "name": "Palolem beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach6.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach2.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Palolem%20Beach4.webp",
@@ -184,8 +184,8 @@
     {
         "id": 16,
         "name": "Mahabalipuram beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach1.webp",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach1.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach6.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach5.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Mahabalipuram%20Beach4.jpeg",
@@ -196,8 +196,8 @@
     {
         "id": 17,
         "name": "Kovalam beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach2.webp",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach6.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Kovalam%20Beach4.avif",
@@ -208,8 +208,8 @@
     {
         "id": 18,
         "name": "Juhu beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach4.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Juhu%20Beach2.jpg",
@@ -220,8 +220,8 @@
     {
         "id": 19,
         "name": "Anjuna beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach3.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach2.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Anjuna%20Beach6.jpg",
@@ -232,8 +232,8 @@
     {
         "id": 20,
         "name": "Nagoa beach Beach",
-        "coverPhotoUrl": "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach1.jpg",
-        "catalogUrls": [
+        "photos": [
+            "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach1.jpg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach3.jpeg",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach4.avif",
             "https://storage.googleapis.com/imessagebackend.appspot.com/beaches/Nagoa%20Beach2.jpg",
