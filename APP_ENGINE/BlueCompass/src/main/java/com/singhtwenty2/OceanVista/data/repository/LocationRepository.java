@@ -4,9 +4,7 @@ import com.singhtwenty2.OceanVista.data.model.entity.UserLocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface LocationRepository extends JpaRepository<UserLocation, UUID> {
+public interface LocationRepository extends JpaRepository<UserLocation, Long> {
     UserLocation findAllByUserId(Long userId);
 }
