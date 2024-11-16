@@ -1,15 +1,20 @@
 package com.singhtwenty2.OceanVista.data.model.dto.response;
 
-import com.singhtwenty2.OceanVista.data.model.entity.Beach;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class BeachResponseDTO {
-    private String successMessage = null;
-    private Beach beach = null;
-    private String errorMessage = null;
+    private Long id;
+    private String name;
+    private double latitude;
+    private double longitude;
+    private String region;
+    private String description;
+    private List<String> photos;
 }

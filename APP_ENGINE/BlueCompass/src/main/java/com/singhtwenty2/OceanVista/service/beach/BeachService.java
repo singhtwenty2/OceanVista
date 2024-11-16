@@ -1,10 +1,16 @@
 package com.singhtwenty2.OceanVista.service.beach;
 
 import com.singhtwenty2.OceanVista.data.model.dto.request.BeachRequestDTO;
+import com.singhtwenty2.OceanVista.data.model.dto.response.AppResponseDTO;
+import com.singhtwenty2.OceanVista.data.model.dto.response.BeachResponseDTO;
 import com.singhtwenty2.OceanVista.data.model.entity.Beach;
 import com.singhtwenty2.OceanVista.data.model.entity.BeachDetail;
 import com.singhtwenty2.OceanVista.data.repository.BeachRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class BeachService {
@@ -48,5 +54,89 @@ public class BeachService {
         beach.setPhotos(dto.getPhotos());
         beach.setBeachDetail(beachDetail);
         return beachRepository.save(beach);
+    }
+
+    public List<BeachResponseDTO> getBeaches() {
+        try {
+            List<Beach> beaches = beachRepository.findAll();
+            return beaches.stream()
+                    .map(beach -> new BeachResponseDTO(
+                            beach.getId(),
+                            beach.getName(),
+                            beach.getLatitude(),
+                            beach.getLongitude(),
+                            beach.getRegion(),
+                            beach.getDescription(),
+                            beach.getPhotos()
+                    ))
+                    .toList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public BeachResponseDTO getBeachById(Long beachId) {
+        try {
+            Beach beach = beachRepository.findById(beachId).orElse(null);
+            if (beach == null) {
+                return null;
+            }
+            return new BeachResponseDTO(
+                    beach.getId(),
+                    beach.getName(),
+                    beach.getLatitude(),
+                    beach.getLongitude(),
+                    beach.getRegion(),
+                    beach.getDescription(),
+                    beach.getPhotos()
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public Beach getBeachDetailById(Long beachId) {
+        try {
+            return beachRepository.findById(beachId).orElse(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public AppResponseDTO deleteBeach(Long beachId) {
+        try {
+            beachRepository.deleteById(beachId);
+            return new AppResponseDTO("Beach deleted successfully", null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AppResponseDTO(null, "Failed to delete beach");
+        }
+    }
+
+    public List<BeachResponseDTO> searchBeaches(String query) {
+        try {
+            List<Beach> beachesByName = beachRepository.findByNameContainingIgnoreCase(query);
+            List<Beach> beachesByRegion = beachRepository.findByRegionContainingIgnoreCase(query);
+            List<Beach> combinedBeaches = Stream.concat(beachesByName.stream(), beachesByRegion.stream())
+                    .distinct()
+                    .collect(Collectors.toList());
+            return combinedBeaches.stream()
+                    .map(beach -> new BeachResponseDTO(
+                            beach.getId(),
+                            beach.getName(),
+                            beach.getLatitude(),
+                            beach.getLongitude(),
+                            beach.getRegion(),
+                            beach.getDescription(),
+                            beach.getPhotos()
+                    ))
+                    .toList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

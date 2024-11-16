@@ -21,6 +21,7 @@ public class Beach extends BaseEntity {
     private double latitude;
     private double longitude;
     private String region;
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
