@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Navbar } from './components/Navbar';
@@ -8,35 +8,112 @@ import { Pricing } from './pages/Pricing';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Login } from './pages/Login';
-import { Signup } from './pages/Signup';
-import { Dashboard } from './pages/Dashboard';
 import { NotFound } from './pages/NotFound';
 import Footer from './pages/Footer';
 import { Blog } from './pages/Blog';
 import { Documentation } from './pages/Documentation';
+import VerifyEmail from './pages/VerifyEmail';
+import Signup from './pages/Signup';
+import { isAuthenticated } from './utils/authToken';
+import { DashboardHome } from './pages/dashboard/DashboardHome';
+
+// Layout wrapper component for public pages
+const PublicLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <>
+      <Navbar />
+      <ThemeToggle />
+      <div className="flex-grow">
+        {children}
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+// Layout wrapper component for dashboard pages
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="min-h-screen">
+      {children}
+    </div>
+  );
+};
+
+// Component to determine which layout to use
+import { ReactNode } from 'react';
+import { UserProfile } from './components/layout/UserProfile';
+import PrivateRoute from './components/PrivateRoute';
+import { UserAccountDetails } from './components/UserAccountDetails';
+
+const LayoutWrapper = ({ children }: { children: ReactNode }) => {
+  const location = useLocation();
+  const isDashboardRoute = location.pathname.startsWith('/dashboard*');
+
+  if (isDashboardRoute) {
+    return <DashboardLayout>{children}</DashboardLayout>;
+  }
+
+  return <PublicLayout>{children}</PublicLayout>;
+};
 
 function App() {
   return (
     <Router>
       <ThemeProvider>
         <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 transition-colors duration-300">
-          <Navbar />
-          <ThemeToggle />
-          <div className="flex-grow">
+          <LayoutWrapper>
             <Routes>
-              <Route path="/" element={<Home />} />
+              {/* Root Route */}
+              <Route
+                path="/"
+                element={
+                  isAuthenticated() ? <Navigate to="/dashboard" /> : <Home />
+                }
+              />
+
+              {/* Public Routes */}
+              <Route
+                path="/login"
+                element={
+                  isAuthenticated() ? <Navigate to="/dashboard" /> : <Login />
+                }
+              />
+              <Route
+                path="/signup"
+                element={
+                  isAuthenticated() ? <Navigate to="/dashboard" /> : <Signup />
+                }
+              />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/dashboard/*" element={<Dashboard />} />
+              <Route path="/verify-email" element={<VerifyEmail />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/documentation" element={<Documentation />} />
+
+              {/* Private Routes */}
+              <Route
+                path="/dashboard"
+                element={
+                  <PrivateRoute>
+                    <DashboardHome />
+                    <UserProfile />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/dashboard*"
+                element={
+                  <PrivateRoute>
+                    <UserAccountDetails />
+                  </PrivateRoute>
+                }
+              />
+              {/* 404 Page */}
               <Route path="*" element={<NotFound />} />
-              <Route path='/blog' element={<Blog/>} />
-              <Route path='/documentation' element={<Documentation/>} />
             </Routes>
-          </div>
-          <Footer />
+          </LayoutWrapper>
         </div>
       </ThemeProvider>
     </Router>
