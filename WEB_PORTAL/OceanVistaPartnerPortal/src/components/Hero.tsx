@@ -42,9 +42,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         {/* Loading state background */}
         <div 
-          className={`absolute inset-0 bg-slate-900 transition-opacity duration-1000 ${
-            isVideoLoaded ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`absolute inset-0 bg-slate-900 transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-0' : 'opacity-100'}`}
         />
         
         {currentVideoUrl && (
@@ -56,9 +54,7 @@ export const Hero: React.FC = () => {
             playsInline
             onLoadedData={() => setIsVideoLoaded(true)}
             poster={fallbackImageUrl}
-            className={`w-full h-full object-cover transition-opacity duration-1000 ${
-              isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
           >
             <source src={currentVideoUrl} type="video/mp4" />
             {/* Fallback message if video fails */}
@@ -109,26 +105,26 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link to="/signup">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-white text-slate-900 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-white/90 transition-colors"
-            >
-              <Anchor className="w-5 h-5" />
-              Partner with Us
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 bg-white text-slate-900 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-white/90 transition-colors text-sm sm:text-base"
+              >
+                <Anchor className="w-5 h-5" />
+                Partner with Us
+              </motion.button>
             </Link>
             <Link to="/documentation">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
-            >
-              Learn More
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors text-sm sm:text-base"
+              >
+                Learn More
+              </motion.button>
             </Link>
           </motion.div>
         </motion.div>
