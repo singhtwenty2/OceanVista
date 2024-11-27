@@ -3,21 +3,21 @@ package com.singhtwenty2.oceanvista.feature_auth.util
 import retrofit2.HttpException
 import java.io.IOException
 
-suspend fun <T> handleAuthApiCall(apiCall: suspend () -> T): AuthResponseHandler<T> {
+suspend fun <T> handleAuthApiCall(apiCall: suspend () -> T): AuthApiResponseHandler<T> {
     return try {
         val result = apiCall.invoke()
-        AuthResponseHandler.Success(result)
+        AuthApiResponseHandler.Success(result)
     } catch (e: HttpException) {
         when(e.code()) {
-            400 -> AuthResponseHandler.BadRequest()
-            401 -> AuthResponseHandler.UnAuthorized()
-            409 -> AuthResponseHandler.Conflict()
-            500 -> AuthResponseHandler.InternalServerError()
-            else -> AuthResponseHandler.UnknownError("Unknown error occurred")
+            400 -> AuthApiResponseHandler.BadRequest()
+            401 -> AuthApiResponseHandler.UnAuthorized()
+            409 -> AuthApiResponseHandler.Conflict()
+            500 -> AuthApiResponseHandler.InternalServerError()
+            else -> AuthApiResponseHandler.UnknownError("Unknown error occurred")
         }
     } catch (e: IOException) {
-        AuthResponseHandler.UnknownError("Network error occurred")
+        AuthApiResponseHandler.UnknownError("Network error occurred")
     } catch (e: Exception) {
-        AuthResponseHandler.UnknownError("Unknown error occurred")
+        AuthApiResponseHandler.UnknownError("Unknown error occurred")
     }
 }

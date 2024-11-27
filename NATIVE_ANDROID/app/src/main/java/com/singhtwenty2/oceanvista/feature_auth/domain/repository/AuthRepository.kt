@@ -4,23 +4,23 @@ import com.singhtwenty2.oceanvista.feature_auth.domain.model.CheckEmailRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.LoginRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.RegisterRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.UserDetailsResponse
-import com.singhtwenty2.oceanvista.feature_auth.util.AuthResponseHandler
+import com.singhtwenty2.oceanvista.feature_auth.util.AuthApiResponseHandler
 
 interface AuthRepository {
 
     suspend fun checkEmailExists(
         emailRequest: CheckEmailRequest
-    ): AuthResponseHandler<Unit>
+    ): AuthApiResponseHandler<Unit>
 
     suspend fun registerUser(
         registerRequest: RegisterRequest
-    ): AuthResponseHandler<Unit>
+    ): AuthApiResponseHandler<Unit>
 
     suspend fun loginUser(
         loginRequest: LoginRequest
-    ): AuthResponseHandler<Unit>
+    ): AuthApiResponseHandler<Unit>
 
     suspend fun fetchUserDetails(
         jwtToken: String
-    ): AuthResponseHandler<UserDetailsResponse?>
+    ): AuthApiResponseHandler<UserDetailsResponse?>
 }

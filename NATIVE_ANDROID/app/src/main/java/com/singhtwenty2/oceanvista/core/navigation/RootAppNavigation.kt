@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -21,16 +22,19 @@ import com.singhtwenty2.oceanvista.feature_auth.presentation.onboard_screen.OnBo
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.RegisterScreenComposable
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.RegisterViewModel
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeScreenComposable
+import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeViewModel
 import org.koin.androidx.compose.getViewModel
 
 @SuppressLint("NewApi")
 @Composable
 fun RootAppNavigationComposable(
     navHostController: NavHostController,
-    startDestination: String = "auth_feature"
+    startDestination: String = "auth_feature",
+    onNavigateToHome: () -> Unit
 ) {
     val registerViewModel = getViewModel<RegisterViewModel>()
     val loginViewModel = getViewModel<LoginViewModel>()
+    val homeViewModel = getViewModel<HomeViewModel>()
 
     NavHost(
         navController = navHostController,
@@ -95,7 +99,12 @@ fun RootAppNavigationComposable(
             composable(
                 "home_screen"
             ) {
-                HomeScreenComposable()
+                HomeScreenComposable(
+                    viewModel = homeViewModel
+                )
+                LaunchedEffect(Unit) {
+                    onNavigateToHome()
+                }
             }
         }
     }

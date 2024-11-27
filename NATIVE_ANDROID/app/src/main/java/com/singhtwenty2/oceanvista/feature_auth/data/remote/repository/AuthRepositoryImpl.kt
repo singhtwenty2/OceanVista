@@ -2,7 +2,7 @@ package com.singhtwenty2.oceanvista.feature_auth.data.remote.repository
 
 import android.content.SharedPreferences
 import android.util.Log
-import com.singhtwenty2.oceanvista.feature_auth.data.remote.AuthService
+import com.singhtwenty2.oceanvista.feature_auth.data.remote.AuthApiService
 import com.singhtwenty2.oceanvista.feature_auth.data.mapper.toCheckEmailRequestDTO
 import com.singhtwenty2.oceanvista.feature_auth.data.mapper.toLoginRequestDTO
 import com.singhtwenty2.oceanvista.feature_auth.data.mapper.toRegisterRequestDTO
@@ -12,7 +12,7 @@ import com.singhtwenty2.oceanvista.feature_auth.domain.model.LoginRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.RegisterRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.UserDetailsResponse
 import com.singhtwenty2.oceanvista.feature_auth.domain.repository.AuthRepository
-import com.singhtwenty2.oceanvista.feature_auth.util.AuthResponseHandler
+import com.singhtwenty2.oceanvista.feature_auth.util.AuthApiResponseHandler
 import com.singhtwenty2.oceanvista.feature_auth.util.handleAuthApiCall
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -20,17 +20,17 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class AuthRepositoryImpl(
-    private val service: AuthService,
+    private val service: AuthApiService,
     private val pref: SharedPreferences
 ) : AuthRepository {
 
-    override suspend fun checkEmailExists(emailRequest: CheckEmailRequest): AuthResponseHandler<Unit> {
+    override suspend fun checkEmailExists(emailRequest: CheckEmailRequest): AuthApiResponseHandler<Unit> {
         return handleAuthApiCall {
             service.checkEmail(emailRequest.toCheckEmailRequestDTO())
         }
     }
 
-    override suspend fun registerUser(registerRequest: RegisterRequest): AuthResponseHandler<Unit> {
+    override suspend fun registerUser(registerRequest: RegisterRequest): AuthApiResponseHandler<Unit> {
         return handleAuthApiCall {
             val response = service.register(registerRequest.toRegisterRequestDTO())
             if (response.isSuccessful) {
@@ -97,7 +97,7 @@ class AuthRepositoryImpl(
     }
 
 
-    override suspend fun loginUser(loginRequest: LoginRequest): AuthResponseHandler<Unit> {
+    override suspend fun loginUser(loginRequest: LoginRequest): AuthApiResponseHandler<Unit> {
         return handleAuthApiCall {
             clearRegistrationDataIfExpired()
             val response = service.login(loginRequest.toLoginRequestDTO())
@@ -126,7 +126,7 @@ class AuthRepositoryImpl(
     }
 
 
-    override suspend fun fetchUserDetails(jwtToken: String): AuthResponseHandler<UserDetailsResponse?> {
+    override suspend fun fetchUserDetails(jwtToken: String): AuthApiResponseHandler<UserDetailsResponse?> {
         return handleAuthApiCall {
             val response = service.aboutUser("Bearer ${pref.getString("jwt_token", "")}")
             if (response.isSuccessful) {

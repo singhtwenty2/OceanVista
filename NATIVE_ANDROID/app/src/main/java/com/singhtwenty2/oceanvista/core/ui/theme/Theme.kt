@@ -1,6 +1,7 @@
 package com.singhtwenty2.oceanvista.core.ui.theme
 
 import android.os.Build
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -253,7 +254,7 @@ val unspecified_scheme = ColorFamily(
 
 @Composable
 fun OceanVistaTheme(
-    darkTheme: Boolean = true,
+    darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
@@ -264,7 +265,7 @@ fun OceanVistaTheme(
         }
 
         darkTheme -> darkScheme
-        else -> darkScheme
+        else -> lightScheme
     }
 
     MaterialTheme(

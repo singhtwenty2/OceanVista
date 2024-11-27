@@ -1,6 +1,6 @@
 package com.singhtwenty2.oceanvista.feature_auth.util
 
-object ConnectionUrl {
+object AuthHttpRoutes {
     const val CHECK_EMAIL = "auth/email-check"
     const val REGSITER_ROUTE = "auth/register"
     const val LOGIN_ROUTE = "auth/login"

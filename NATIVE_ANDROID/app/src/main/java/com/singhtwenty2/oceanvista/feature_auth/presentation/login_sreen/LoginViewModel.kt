@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.LoginRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.repository.AuthRepository
-import com.singhtwenty2.oceanvista.feature_auth.util.AuthResponseHandler
+import com.singhtwenty2.oceanvista.feature_auth.util.AuthApiResponseHandler
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -15,7 +15,7 @@ class LoginViewModel(
 ): ViewModel() {
 
     val state = mutableStateOf(LoginState())
-    private val loginResultChannel = Channel<AuthResponseHandler<Unit>>()
+    private val loginResultChannel = Channel<AuthApiResponseHandler<Unit>>()
     val loginResult = loginResultChannel.receiveAsFlow()
 
     fun onEvent(events: LoginUiEvents) {

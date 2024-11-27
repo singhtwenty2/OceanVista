@@ -77,4 +77,10 @@ dependencies {
     testImplementation (libs.koin.test.junit4)
     // M3 Extended Icons
     implementation(libs.androidx.material.icons.extended)
+    // Location
+    implementation(libs.play.services.location)
+    // Work Manager
+    implementation (libs.androidx.work.runtime.ktx)
+    // coil
+    implementation(libs.coil.compose)
 }

@@ -30,7 +30,7 @@ import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.com
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.component.RegisterTopAppBar
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.component.SnackbarType
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.component.TermsAndPolicySection
-import com.singhtwenty2.oceanvista.feature_auth.util.AuthResponseHandler
+import com.singhtwenty2.oceanvista.feature_auth.util.AuthApiResponseHandler
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -63,34 +63,34 @@ fun RegisterScreenComposable(
         viewModel.registerResult.collect { result ->
             showSnackbar = true
             when (result) {
-                is AuthResponseHandler.Success -> {
+                is AuthApiResponseHandler.Success -> {
                     snackbarMessage = "Registration successful. Please open your email to verify and come back to login."
                     snackbarType = SnackbarType.SUCCESS
                     delay(7000)
                     onLoginNavigate()
                 }
 
-                is AuthResponseHandler.BadRequest -> {
+                is AuthApiResponseHandler.BadRequest -> {
                     snackbarMessage = "Bad Request. Please try again"
                     snackbarType = SnackbarType.ERROR
                 }
 
-                is AuthResponseHandler.Conflict -> {
+                is AuthApiResponseHandler.Conflict -> {
                     snackbarMessage = "Email already exists. Please login"
                     snackbarType = SnackbarType.WARNING
                 }
 
-                is AuthResponseHandler.InternalServerError -> {
+                is AuthApiResponseHandler.InternalServerError -> {
                     snackbarMessage = "Internal Server Error. Please try again"
                     snackbarType = SnackbarType.ERROR
                 }
 
-                is AuthResponseHandler.UnAuthorized -> {
+                is AuthApiResponseHandler.UnAuthorized -> {
                     snackbarMessage = "Unauthorized. Please try again"
                     snackbarType = SnackbarType.ERROR
                 }
 
-                is AuthResponseHandler.UnknownError -> {
+                is AuthApiResponseHandler.UnknownError -> {
                     snackbarMessage = "Unknown Error. Please try again"
                     snackbarType = SnackbarType.ERROR
                 }

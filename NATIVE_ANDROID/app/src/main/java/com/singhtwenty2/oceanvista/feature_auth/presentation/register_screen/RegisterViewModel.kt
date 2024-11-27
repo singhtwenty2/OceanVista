@@ -4,10 +4,9 @@ import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.singhtwenty2.oceanvista.feature_auth.domain.model.CheckEmailRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.model.RegisterRequest
 import com.singhtwenty2.oceanvista.feature_auth.domain.repository.AuthRepository
-import com.singhtwenty2.oceanvista.feature_auth.util.AuthResponseHandler
+import com.singhtwenty2.oceanvista.feature_auth.util.AuthApiResponseHandler
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -17,7 +16,7 @@ class RegisterViewModel(
 ): ViewModel() {
 
     var state = mutableStateOf(RegisterState())
-    private val registerResultChannel = Channel<AuthResponseHandler<Unit>>()
+    private val registerResultChannel = Channel<AuthApiResponseHandler<Unit>>()
     val registerResult = registerResultChannel.receiveAsFlow()
 
     fun onEvent(events: RegisterUiEvents) {
