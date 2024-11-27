@@ -42,6 +42,7 @@ public class BeachController {
     ) {
         String authHeader = request.getHeader("Authorization");
         String token = authHeader != null ? authHeader.substring(7).trim() : null;
+        System.out.println("*****\n\n\nBeachs Get Controller Triggered****");
         if (token == null) {
             return ResponseEntity
                     .status(HttpStatus.UNAUTHORIZED)

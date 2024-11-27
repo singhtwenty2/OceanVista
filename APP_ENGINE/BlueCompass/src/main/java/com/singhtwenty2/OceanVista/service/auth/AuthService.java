@@ -6,15 +6,16 @@ import com.singhtwenty2.OceanVista.data.model.dto.request.UserEmailRequestDTO;
 import com.singhtwenty2.OceanVista.data.model.dto.response.AppResponseDTO;
 import com.singhtwenty2.OceanVista.data.model.dto.response.LoginResponseDTO;
 import com.singhtwenty2.OceanVista.data.model.dto.response.UserDetailResponseDTO;
+import com.singhtwenty2.OceanVista.data.model.entity.UserLocation;
 import com.singhtwenty2.OceanVista.data.model.entity.Users;
 import com.singhtwenty2.OceanVista.data.model.enums.AuthProvider;
 import com.singhtwenty2.OceanVista.data.repository.AuthRepository;
+import com.singhtwenty2.OceanVista.data.repository.LocationRepository;
 import com.singhtwenty2.OceanVista.service.email.EmailService;
 import com.singhtwenty2.OceanVista.service.redis.RedisService;
 import com.singhtwenty2.OceanVista.util.auth.ExtractUsername;
 import com.singhtwenty2.OceanVista.util.auth.JwtService;
 import com.singhtwenty2.OceanVista.util.auth.ValidationToken;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -24,20 +25,29 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class AuthService {
 
-    @Autowired
-    private AuthRepository repository;
-    @Autowired
-    private RedisService redisService;
-    @Autowired
-    private EmailService emailService;
-    @Autowired
-    private JwtService jwtService;
+    private final AuthRepository authRepository;
+    private final RedisService redisService;
+    private final EmailService emailService;
+    private final JwtService jwtService;
+    private final LocationRepository locationRepository;
     @Value("${connection_string.url}")
     private String connectionUrl;
-    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+
+    public AuthService(AuthRepository authRepository,
+                       RedisService redisService,
+                       EmailService emailService,
+                       JwtService jwtService,
+                       LocationRepository locationRepository) {
+        this.authRepository = authRepository;
+        this.redisService = redisService;
+        this.emailService = emailService;
+        this.jwtService = jwtService;
+        this.locationRepository = locationRepository;
+    }
 
     public AppResponseDTO checkUserEmail(UserEmailRequestDTO requestDTO) {
-        Users user = repository.findByEmail(requestDTO.getEmail());
+        Users user = authRepository.findByEmail(requestDTO.getEmail());
         if (user != null) {
             return new AppResponseDTO(null, "Email Already Linked With An Account");
         }
@@ -67,12 +77,12 @@ public class AuthService {
         if(userDetails == null) {
             return new AppResponseDTO(null, "Failed To Verify Email");
         }
-        saveUser(userDetails);
+        saveUserAndLocation(userDetails);
         redisService.deleteUserToken(token);
         return new AppResponseDTO("Email Verified & Account Registration Completed", null);
     }
 
-    private void saveUser(RegisterRequestDTO userDetails) {
+    private void saveUserAndLocation(RegisterRequestDTO userDetails) {
         String username = ExtractUsername.extractUsernameFromEmail(userDetails.getEmail());
         Users user = new Users();
         user.setUsername(username);
@@ -82,8 +92,15 @@ public class AuthService {
         user.setPassword(encoder.encode(userDetails.getPassword()));
         user.setAuthProvider(AuthProvider.LOCAL);
         user.setNotificationPreference(userDetails.getNotificationPreference());
-        repository.save(user);
+        Users savedUser = authRepository.save(user);
+
+        UserLocation dummyLocation = new UserLocation();
+        dummyLocation.setLatitude(0.0);
+        dummyLocation.setLongitude(0.0);
+        dummyLocation.setUser(savedUser);
+        locationRepository.save(dummyLocation);
     }
+
 
     public LoginResponseDTO login(LoginRequestDTO requestDTO) {
         try {
@@ -101,7 +118,7 @@ public class AuthService {
 
     public UserDetailResponseDTO getUserDetails(String token) {
         String email = jwtService.extractUserEmail(token);
-        Users user = repository.findByEmail(email);
+        Users user = authRepository.findByEmail(email);
         if(user != null) {
             return new UserDetailResponseDTO(
                     user.getId().toString(),

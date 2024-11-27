@@ -24,20 +24,20 @@ public class Beach extends BaseEntity {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "beach_detail_id")
     private BeachDetail beachDetail;
 
-    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<BeachCondition> conditions;
 
-    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Resort> resorts;
 
-    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<MedicalService> medicalServices;
 
-    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "beach", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Alert> alerts;
 
     @ElementCollection

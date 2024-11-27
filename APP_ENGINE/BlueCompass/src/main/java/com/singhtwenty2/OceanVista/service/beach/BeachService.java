@@ -66,7 +66,9 @@ public class BeachService {
                             beach.getLatitude(),
                             beach.getLongitude(),
                             beach.getRegion(),
-                            beach.getDescription(),
+                            beach.getBeachDetail().getOpeningTime(),
+                            beach.getBeachDetail().getClosingTime(),
+                            beach.getBeachDetail().getActivities(),
                             beach.getPhotos()
                     ))
                     .toList();
@@ -88,7 +90,9 @@ public class BeachService {
                     beach.getLatitude(),
                     beach.getLongitude(),
                     beach.getRegion(),
-                    beach.getDescription(),
+                    beach.getBeachDetail().getOpeningTime(),
+                    beach.getBeachDetail().getClosingTime(),
+                    beach.getBeachDetail().getActivities(),
                     beach.getPhotos()
             );
         } catch (Exception e) {
@@ -130,7 +134,9 @@ public class BeachService {
                             beach.getLatitude(),
                             beach.getLongitude(),
                             beach.getRegion(),
-                            beach.getDescription(),
+                            beach.getBeachDetail().getOpeningTime(),
+                            beach.getBeachDetail().getClosingTime(),
+                            beach.getBeachDetail().getActivities(),
                             beach.getPhotos()
                     ))
                     .toList();

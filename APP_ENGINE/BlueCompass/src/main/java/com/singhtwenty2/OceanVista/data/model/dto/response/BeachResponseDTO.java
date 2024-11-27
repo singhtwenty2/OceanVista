@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalTime;
 import java.util.List;
 
 @Data
@@ -15,6 +16,8 @@ public class BeachResponseDTO {
     private double latitude;
     private double longitude;
     private String region;
-    private String description;
+    private LocalTime openingTime;
+    private LocalTime closingTime;
+    private List<String> activities;
     private List<String> photos;
 }
