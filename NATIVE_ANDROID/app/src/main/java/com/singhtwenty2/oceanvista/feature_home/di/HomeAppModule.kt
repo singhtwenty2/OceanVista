@@ -10,6 +10,7 @@ import com.singhtwenty2.oceanvista.feature_home.data.repository.LocationReposito
 import com.singhtwenty2.oceanvista.feature_home.domain.repository.BeachRepository
 import com.singhtwenty2.oceanvista.feature_home.domain.repository.LocationRepository
 import com.singhtwenty2.oceanvista.feature_home.domain.worker.LocationWorker
+import com.singhtwenty2.oceanvista.feature_home.presentation.beach_detail_screen.BeachDetailViewModel
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeViewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -46,6 +47,10 @@ val homeAppModule = module {
 
     single<BeachRepository> {
         BeachRepositoryImpl(get(), get())
+    }
+
+    factory { (beachId: Long) ->
+        BeachDetailViewModel(beachRepository = get(), beachId = beachId)
     }
 
     single {

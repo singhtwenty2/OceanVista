@@ -64,7 +64,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.component.EnhancedBeachCard
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.component.EnhancedCategoryChip
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.component.FeaturedBeachCard
@@ -77,7 +76,7 @@ fun HomeScreenComposable(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel,
     onProfileClick: () -> Unit = {},
-    onBeachClick: (String) -> Unit = {}
+    onBeachClick: (Long) -> Unit = {}
 ) {
     val waterQuality = listOf(
         "Excellent",
@@ -273,7 +272,7 @@ fun HomeScreenComposable(
                                         fraction = 1f - pageOffset.coerceIn(0f, 1f)
                                     )
                                 }
-                                .clickable { onBeachClick(beach.id) }
+                                .clickable { onBeachClick(beach.id.toLong()) }
                         )
                     }
                 }
@@ -312,9 +311,10 @@ fun HomeScreenComposable(
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     // Last 5 beaches as popular beaches
-                    val popularBeaches = beaches.shuffled().take(minOf(5, beaches.size))
+                    val popularBeaches = beaches
                     popularBeaches.forEach { beach ->
                         EnhancedBeachCard(
+                            onBeachClick = { onBeachClick(beach.id.toLong()) },
                             beach = beach,
                             waterQA = waterQuality.random(),
                         )

@@ -1,29 +1,30 @@
 package com.singhtwenty2.oceanvista.core.navigation
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import androidx.navigation.navArgument
 import com.singhtwenty2.oceanvista.feature_auth.presentation.login_sreen.LoginScreenComposable
 import com.singhtwenty2.oceanvista.feature_auth.presentation.login_sreen.LoginViewModel
 import com.singhtwenty2.oceanvista.feature_auth.presentation.onboard_screen.OnBoardingScreenComposable
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.RegisterScreenComposable
 import com.singhtwenty2.oceanvista.feature_auth.presentation.register_screen.RegisterViewModel
+import com.singhtwenty2.oceanvista.feature_home.presentation.beach_detail_screen.BeachDetailScreenComposable
+import com.singhtwenty2.oceanvista.feature_home.presentation.beach_detail_screen.BeachDetailViewModel
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeScreenComposable
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeViewModel
 import org.koin.androidx.compose.getViewModel
+import org.koin.core.parameter.parametersOf
 
 @SuppressLint("NewApi")
 @Composable
@@ -100,11 +101,35 @@ fun RootAppNavigationComposable(
                 "home_screen"
             ) {
                 HomeScreenComposable(
-                    viewModel = homeViewModel
+                    viewModel = homeViewModel,
+                    onBeachClick = {
+                        navHostController.navigate("beach_detail_screen/$it")
+                        Log.d("RootAppNavigation", "BeachId: $it")
+                    }
                 )
                 LaunchedEffect(Unit) {
                     onNavigateToHome()
                 }
+            }
+            composable(
+                route = "beach_detail_screen/{beachId}",
+                arguments = listOf(
+                    navArgument("beachId") {
+                        type = NavType.LongType
+                    }
+                )
+            ) { backStackEntry ->
+                val beachId = backStackEntry.arguments?.getLong("beachId")
+                    ?: throw IllegalArgumentException("Invalid beachId")
+                val beachDetailViewModel: BeachDetailViewModel =
+                    getViewModel(parameters = { parametersOf(beachId) })
+                BeachDetailScreenComposable(
+                    viewModel = beachDetailViewModel,
+                    onBackPress = {
+                        navHostController.popBackStack()
+                    },
+                    beachId = beachId
+                )
             }
         }
     }

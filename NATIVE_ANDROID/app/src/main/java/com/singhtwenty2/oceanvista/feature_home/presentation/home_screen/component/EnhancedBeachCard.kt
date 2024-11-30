@@ -52,6 +52,7 @@ fun BeachStatusDot(isOpen: Boolean) {
 
 @Composable
 fun EnhancedBeachCard(
+    onBeachClick: (Beach) -> Unit,
     beach: Beach,
     waterQA: String
 ) {
@@ -61,7 +62,7 @@ fun EnhancedBeachCard(
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
-            .clickable { },
+            .clickable { onBeachClick(beach) },
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
     ) {

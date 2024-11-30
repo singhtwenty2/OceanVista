@@ -34,8 +34,7 @@ fun FeaturedBeachCard(
         modifier = modifier
             .width(280.dp)
             .fillMaxHeight()
-            .padding(vertical = 8.dp)
-            .clickable { },
+            .padding(vertical = 8.dp),
         shape = RoundedCornerShape(24.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {

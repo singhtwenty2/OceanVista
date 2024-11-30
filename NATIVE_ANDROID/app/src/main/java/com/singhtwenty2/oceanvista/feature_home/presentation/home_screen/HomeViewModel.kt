@@ -20,7 +20,9 @@ class HomeViewModel(
     val beachResult = beachChannel.receiveAsFlow()
 
     init {
-        getBeaches()
+        if(state.value.beaches.isEmpty()) {
+            getBeaches()
+        }
     }
 
     fun onEvent(event: HomeUiEvents) {
