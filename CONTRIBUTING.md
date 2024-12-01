@@ -10,8 +10,8 @@ Thank you for your interest in contributing to the Major Project! We welcome con
 2. **Clone Your Fork**
    - Clone your fork to your local machine:
      ```bash
-     git clone https://github.com/singhtwenty2/Major-Project.git
-     cd Major-Project
+     git clone https://github.com/singhtwenty2/OceanVista.git
+     cd OceanVista
      ```
 
 3. **Create a Branch**
