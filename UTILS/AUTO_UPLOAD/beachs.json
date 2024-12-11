@@ -32,13 +32,13 @@
   {
     "id": 6,
     "name": "Kaup Beach",
-    "region": "Mangaluru, Karnataka",
+    "region": "Mangaluru",
     "coordinates": { "latitude": 13.2120, "longitude": 74.7480 }
   },
   {
     "id": 7,
     "name": "Radhanagar Beach",
-    "region": "Havelock Island, Andaman and Nicobar Islands",
+    "region": "Andaman and Nicobar Islands",
     "coordinates": { "latitude": 11.9796, "longitude": 92.9876 }
   },
   {
@@ -56,7 +56,7 @@
   {
     "id": 10,
     "name": "Om Beach",
-    "region": "Gokarna, Karnataka",
+    "region": "Karnataka",
     "coordinates": { "latitude": 14.5155, "longitude": 74.3112 }
   },
   {
@@ -68,7 +68,7 @@
   {
     "id": 12,
     "name": "Puri Beach",
-    "region": "Odisha",
+    "region": "Bhubaneswar",
     "coordinates": { "latitude": 19.7983, "longitude": 85.8249 }
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 14,
     "name": "Elephant Beach",
-    "region": "Havelock Island, Andaman",
+    "region": "Andaman",
     "coordinates": { "latitude": 12.0016, "longitude": 93.0182 }
   },
   {
@@ -110,7 +110,7 @@
   {
     "id": 19,
     "name": "Rishikonda Beach",
-    "region": "Visakhapatnam, Andhra Pradesh",
+    "region": "Visakhapatnam",
     "coordinates": { "latitude": 17.7726, "longitude": 83.3770 }
   },
   {
