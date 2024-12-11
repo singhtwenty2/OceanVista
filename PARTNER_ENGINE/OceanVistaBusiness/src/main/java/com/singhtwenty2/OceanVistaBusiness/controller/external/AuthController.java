@@ -25,11 +25,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/partner.engine.api/v1/auth")
 public class AuthController {
 
-    @Autowired
-    private AuthService authService;
+    private final AuthService authService;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
+
+    public AuthController(AuthService authService, AuthenticationManager authenticationManager) {
+        this.authService = authService;
+        this.authenticationManager = authenticationManager;
+    }
 
     @PostMapping("/email-check")
     public ResponseEntity<AppResponseDTO> cheakEmail(
@@ -93,7 +96,7 @@ public class AuthController {
 
     @GetMapping("/about")
     public ResponseEntity<PartnerDetailResponseDTO> getUserDetail(HttpServletRequest request) {
-        String authHeader = request.getHeader("Authorization");
+        String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         String token = authHeader != null ? authHeader.substring(7).trim() : null;
         if(token == null) {
             ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new PartnerDetailResponseDTO());

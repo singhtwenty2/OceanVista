@@ -7,8 +7,10 @@ import com.singhtwenty2.OceanVistaBusiness.data.model.dto.response.AppResponseDT
 import com.singhtwenty2.OceanVistaBusiness.data.model.dto.response.LoginResponseDTO;
 import com.singhtwenty2.OceanVistaBusiness.data.model.dto.response.PartnerDetailResponseDTO;
 import com.singhtwenty2.OceanVistaBusiness.data.model.entity.Partner;
+import com.singhtwenty2.OceanVistaBusiness.data.model.entity.SubscriptionPlan;
 import com.singhtwenty2.OceanVistaBusiness.data.model.enums.PartnerStatus;
 import com.singhtwenty2.OceanVistaBusiness.data.repository.auth.AuthRepository;
+import com.singhtwenty2.OceanVistaBusiness.data.repository.plans.SubscriptionPlanRepository;
 import com.singhtwenty2.OceanVistaBusiness.service.email.EmailService;
 import com.singhtwenty2.OceanVistaBusiness.service.redis.RedisService;
 import com.singhtwenty2.OceanVistaBusiness.util.auth.ValidationToken;
@@ -22,17 +24,22 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class AuthService {
 
-    @Autowired
-    private AuthRepository authRepository;
-    @Autowired
-    private RedisService redisService;
-    @Autowired
-    private EmailService emailService;
-    @Autowired
-    private JwtService jwtService;
+    private final SubscriptionPlanRepository subscriptionPlanRepository;
+    private final AuthRepository authRepository;
+    private final RedisService redisService;
+    private final EmailService emailService;
+    private final JwtService jwtService;
     @Value("${connection_string.url}")
     private String connectionUrl;
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+
+    public AuthService(AuthRepository authRepository, RedisService redisService, EmailService emailService, JwtService jwtService, SubscriptionPlanRepository subscriptionPlanRepository) {
+        this.authRepository = authRepository;
+        this.redisService = redisService;
+        this.emailService = emailService;
+        this.jwtService = jwtService;
+        this.subscriptionPlanRepository = subscriptionPlanRepository;
+    }
 
     public AppResponseDTO checkUserEmail(PartnerEmailRequestDTO requestDTO) {
         Partner partner = authRepository.findByEmail(requestDTO.getEmail());
@@ -79,6 +86,8 @@ public class AuthService {
         partner.setPartnerType(partnerDetails.getPartnerType());
         partner.setStatus(PartnerStatus.ACTIVE);
         partner.setMaxBeachCount(1);
+        SubscriptionPlan starterPlan = subscriptionPlanRepository.findByName("Starter");
+        partner.setSubscriptionPlan(starterPlan);
         authRepository.save(partner);
     }
 
@@ -102,6 +111,7 @@ public class AuthService {
         if(partner != null) {
             return new PartnerDetailResponseDTO(
                     partner.getId().toString(),
+                    partner.getSubscriptionPlan().getName(),
                     partner.getName(),
                     partner.getEmail(),
                     partner.getPhoneNumber(),

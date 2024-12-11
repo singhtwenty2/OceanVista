@@ -40,4 +40,7 @@ public class Partner extends BaseEntity {
     )
     private Set<Beach> beaches;
     private int maxBeachCount;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "plan_id")
+    private SubscriptionPlan subscriptionPlan;
 }

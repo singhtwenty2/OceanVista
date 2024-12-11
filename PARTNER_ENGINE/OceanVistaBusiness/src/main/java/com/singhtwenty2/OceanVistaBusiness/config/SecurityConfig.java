@@ -52,7 +52,8 @@ public class SecurityConfig {
                                 "partner.engine.api/v1/auth/email-check",
                                 "partner.engine.api/v1/auth/register",
                                 "partner.engine.api/v1/auth/verify-email",
-                                "partner.engine.api/v1/auth/login"
+                                "partner.engine.api/v1/auth/login",
+                                "partner.engine.api/v1/subscription-plan/all"
                         )
                         .permitAll()
                         .anyRequest()

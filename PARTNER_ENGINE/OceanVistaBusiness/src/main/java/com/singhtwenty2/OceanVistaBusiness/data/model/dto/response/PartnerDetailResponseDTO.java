@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PartnerDetailResponseDTO {
     private String userId;
+    private String subscriptionPlanName;
     private String name;
     private String email;
     private String phoneNumber;
