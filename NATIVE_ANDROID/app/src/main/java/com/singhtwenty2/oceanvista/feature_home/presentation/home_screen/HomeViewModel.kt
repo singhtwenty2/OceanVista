@@ -27,11 +27,9 @@ class HomeViewModel(
 
     fun onEvent(event: HomeUiEvents) {
         when(event) {
-            HomeUiEvents.OnLoad -> {
-                TODO()
-            }
+            HomeUiEvents.OnLoad -> getBeaches()
             HomeUiEvents.OnBeachClicked -> TODO()
-            HomeUiEvents.OnRetry -> TODO()
+            HomeUiEvents.OnRetry -> getBeaches()
         }
     }
     private fun getBeaches() {

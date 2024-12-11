@@ -15,7 +15,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 val authAppModule = module {
     single {
         Retrofit.Builder()
-            .baseUrl(HttpBaseUrl.BASE_URL)
+            .baseUrl(HttpBaseUrl.APP_ENGINE_BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create(AuthApiService::class.java)

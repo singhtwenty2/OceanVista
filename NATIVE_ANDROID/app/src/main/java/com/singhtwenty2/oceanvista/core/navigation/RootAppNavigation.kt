@@ -23,6 +23,11 @@ import com.singhtwenty2.oceanvista.feature_home.presentation.beach_detail_screen
 import com.singhtwenty2.oceanvista.feature_home.presentation.beach_detail_screen.BeachDetailViewModel
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeScreenComposable
 import com.singhtwenty2.oceanvista.feature_home.presentation.home_screen.HomeViewModel
+import com.singhtwenty2.oceanvista.feature_home.presentation.map_screen.MapScreenComposable
+import com.singhtwenty2.oceanvista.feature_home.presentation.map_screen.MapViewModel
+import com.singhtwenty2.oceanvista.feature_home.presentation.profile_screen.ProfileScreenComposable
+import com.singhtwenty2.oceanvista.feature_home.presentation.profile_screen.ProfileUiEvents
+import com.singhtwenty2.oceanvista.feature_home.presentation.profile_screen.ProfileViewModel
 import org.koin.androidx.compose.getViewModel
 import org.koin.core.parameter.parametersOf
 
@@ -36,6 +41,8 @@ fun RootAppNavigationComposable(
     val registerViewModel = getViewModel<RegisterViewModel>()
     val loginViewModel = getViewModel<LoginViewModel>()
     val homeViewModel = getViewModel<HomeViewModel>()
+    val profileViewModel = getViewModel<ProfileViewModel>()
+    val mapViewModel = getViewModel<MapViewModel>()
 
     NavHost(
         navController = navHostController,
@@ -93,6 +100,7 @@ fun RootAppNavigationComposable(
                 )
             }
         }
+        // Home Feature Screen
         navigation(
             startDestination = "home_screen",
             route = "home_feature"
@@ -105,6 +113,12 @@ fun RootAppNavigationComposable(
                     onBeachClick = {
                         navHostController.navigate("beach_detail_screen/$it")
                         Log.d("RootAppNavigation", "BeachId: $it")
+                    },
+                    onProfileClick = {
+                        navHostController.navigate("profile_screen")
+                    },
+                    onMapClick = {
+                        navHostController.navigate("map_screen")
                     }
                 )
                 LaunchedEffect(Unit) {
@@ -130,6 +144,29 @@ fun RootAppNavigationComposable(
                     },
                     beachId = beachId
                 )
+            }
+            composable(
+                route = "profile_screen"
+            ) {
+                ProfileScreenComposable(
+                    viewModel = profileViewModel,
+                    onBackPressed = {
+                        navHostController.popBackStack()
+                    },
+                    onLogoutClicked = {
+                        profileViewModel.onEvent(ProfileUiEvents.Logout)
+                        navHostController.navigate("auth_feature") {
+                            popUpTo("home_feature") {
+                                inclusive = true
+                            }
+                        }
+                    }
+                )
+            }
+            composable(
+                route = "map_screen"
+            ) {
+                MapScreenComposable(viewModel = mapViewModel)
             }
         }
     }

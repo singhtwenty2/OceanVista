@@ -83,4 +83,8 @@ dependencies {
     implementation (libs.androidx.work.runtime.ktx)
     // coil
     implementation(libs.coil.compose)
+    // Maps
+    implementation (libs.play.services.maps)
+    implementation (libs.android.maps.utils)
+    implementation(libs.maps.compose)
 }

@@ -1,10 +1,14 @@
 package com.singhtwenty2.oceanvista.feature_home.data.mapper
 
+import com.singhtwenty2.oceanvista.feature_home.data.remote.model.dto.response.BeachColorCodeResposneDTO
 import com.singhtwenty2.oceanvista.feature_home.data.remote.model.dto.response.BeachDetail
 import com.singhtwenty2.oceanvista.feature_home.data.remote.model.dto.response.BeachDetailResponseDTO
 import com.singhtwenty2.oceanvista.feature_home.data.remote.model.dto.response.BeachResponseDTO
+import com.singhtwenty2.oceanvista.feature_home.data.remote.model.dto.response.BeachWeatherFeatureDto
 import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.Beach
+import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.BeachColorCode
 import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.BeachDetailDomainModel
+import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.ConditionColor
 import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.FullBeachDetailDomainModel
 
 fun BeachResponseDTO.toBeach(): Beach {
@@ -58,4 +62,34 @@ fun BeachDetail.toDomainModel(): BeachDetailDomainModel {
         rulesAndRegulations = this.rulesAndRegulations,
         emergencyContactInfo = this.emergencyContactInfo
     )
+}
+
+fun BeachWeatherFeatureDto.toDomain(): BeachColorCode {
+    return BeachColorCode(
+        id = properties.id,
+        name = properties.name,
+        region = properties.region,
+        latitude = geometry.coordinates[1],
+        longitude = geometry.coordinates[0],
+        temperature = properties.temperature_c,
+        humidity = properties.humidity,
+        windSpeed = properties.wind_kph,
+        condition = properties.condition,
+        conditionColor = mapColorCode(properties.color_code),
+        lastUpdated = properties.last_updated
+    )
+}
+
+private fun mapColorCode(colorCode: String): ConditionColor {
+    return when (colorCode.lowercase()) {
+        "green" -> ConditionColor.GREEN
+        "yellow" -> ConditionColor.YELLOW
+        "orange" -> ConditionColor.ORANGE
+        "red" -> ConditionColor.RED
+        else -> ConditionColor.GRAY
+    }
+}
+
+fun BeachColorCodeResposneDTO.toDomainList(): List<BeachColorCode> {
+    return features.map { it.toDomain() }
 }

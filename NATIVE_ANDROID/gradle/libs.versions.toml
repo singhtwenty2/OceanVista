@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.2"
+androidMapsUtils = "2.3.0"
 coilCompose = "2.4.0"
 koinAndroid = "3.5.6"
 koinAndroidxCompose = "3.5.6"
@@ -16,14 +17,17 @@ composeBom = "2024.10.01"
 
 converterMoshi = "2.9.0"
 lifecycleViewmodelCompose = "2.8.7"
+mapsCompose = "4.3.3"
 navigationCompose = "2.8.3"
 playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
 retrofit = "2.9.0"
 uiTextGoogleFonts = "1.7.5"
 materialIconsExtended = "1.7.5"
 workRuntimeKtx = "2.10.0"
 
 [libraries]
+android-maps-utils = { module = "com.google.maps.android:android-maps-utils", version.ref = "androidMapsUtils" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
@@ -45,7 +49,9 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndr
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
 koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation", version.ref = "koinAndroidxNavigation" }
 koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koinTestJunit4" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }

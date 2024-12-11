@@ -76,7 +76,8 @@ fun HomeScreenComposable(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel,
     onProfileClick: () -> Unit = {},
-    onBeachClick: (Long) -> Unit = {}
+    onBeachClick: (Long) -> Unit = {},
+    onMapClick: () -> Unit = {}
 ) {
     val waterQuality = listOf(
         "Excellent",
@@ -373,7 +374,7 @@ fun HomeScreenComposable(
         }
 
         FloatingActionButton(
-            onClick = { /* TODO: Implement quick navigation */ },
+            onClick = onMapClick,
             modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .padding(16.dp)
