@@ -3,6 +3,7 @@
 Welcome to the OceanVista repository! This project is a real-time **Beach Suitability and Safety App** designed for tourists and beachgoers in India. Using advanced data processing and AI-powered analytics, OceanVista delivers up-to-date beach safety bulletins, integrates with nearby services, and ensures a safe and convenient beach experience.
 
 ![Ongoing Project](https://img.shields.io/badge/Status-Ongoing-blue?style=flat-square)
+[![Beta Release](https://img.shields.io/badge/Beta-Live-green?style=flat-square)](https://app-oceanvista.pages.dev/)
 
 ---
 
@@ -93,38 +94,39 @@ To set up OceanVista locally, follow these steps:
    ```bash
    git clone https://github.com/singhtwenty2/OceanVista.git
    cd OceanVista
+   ```
 
 2. **Backend Setup:**
    Make sure you have Java 17+ and Maven installed.
    Navigate to the backend directory
-     ```bash
-     cd APP_ENGINE
-     mvn clean install
-     mvn spring-boot:run
+   ```bash
+   cd APP_ENGINE
+   mvn clean install
+   mvn spring-boot:run
 
-     cd PARTNER_ENGINE
-     mvn clean install
-     mvn spring-boot:run
-  Configure the database by setting up application.yml in the backend project with the appropriate PostgreSQL configurations (e.g., database URL, username, 
-  password).
+   cd PARTNER_ENGINE
+   mvn clean install
+   mvn spring-boot:run
+   ```
+   Configure the database by setting up application.yml in the backend project with the appropriate PostgreSQL configurations (e.g., database URL, username, password).
 
 3. **Frontend Setup:**
    ```bash
    cd WEB_PORTAL/OceanVistaPartnerPortal
    npm install
    npm run dev
+   ```
 
 4. **Mobile Setup:**
-
    For Android (Jetpack Compose):
    Open the Android project in Android Studio, build, and run it on an emulator or device.
-   
 
-6. **Docker Setup (Optional):**
+5. **Docker Setup (Optional):**
    If using Docker, make sure Docker is installed.
    Build and run the Docker containers:
    ```bash
    docker-compose up --build
+   ```
 
 ---
 
