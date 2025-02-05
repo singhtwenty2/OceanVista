@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -14,20 +14,24 @@ import { Blog } from './pages/Blog';
 import { Documentation } from './pages/Documentation';
 import VerifyEmail from './pages/VerifyEmail';
 import Signup from './pages/Signup';
+import { UserProfile } from './components/layout/UserProfile';
+import PrivateRoute from './components/PrivateRoute';
+import { UserAccountDetails } from './components/UserAccountDetails';
+import DashboardScreen from './pages/dashboard/DashboardScreen';
 import { isAuthenticated } from './utils/authToken';
-import { DashboardHome } from './pages/dashboard/DashboardHome';
+import { Business } from './pages/dashboard/Business';
 
 // Layout wrapper component for public pages
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <ThemeToggle />
       <div className="flex-grow">
         {children}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
@@ -41,14 +45,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Component to determine which layout to use
-import { ReactNode } from 'react';
-import { UserProfile } from './components/layout/UserProfile';
-import PrivateRoute from './components/PrivateRoute';
-import { UserAccountDetails } from './components/UserAccountDetails';
-
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const location = useLocation();
-  const isDashboardRoute = location.pathname.startsWith('/dashboard*');
+  const isDashboardRoute = location.pathname.startsWith('/dashboard');
 
   if (isDashboardRoute) {
     return <DashboardLayout>{children}</DashboardLayout>;
@@ -61,7 +60,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider>
-        <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div className="bg-white dark:bg-slate-900 transition-colors duration-300">
           <LayoutWrapper>
             <Routes>
               {/* Root Route */}
@@ -97,16 +96,33 @@ function App() {
                 path="/dashboard"
                 element={
                   <PrivateRoute>
-                    <DashboardHome />
+                    <DashboardScreen />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/dashboard/account/details"
+                element={
+                  <PrivateRoute>
+                    <UserAccountDetails />
+                  </PrivateRoute>
+                }
+              />
+              
+              {/* User Profile Route */}
+              <Route
+                path="/dashboard/profile"
+                element={
+                  <PrivateRoute>
                     <UserProfile />
                   </PrivateRoute>
                 }
               />
               <Route
-                path="/dashboard*"
+                path="/dashboard/bookings"
                 element={
                   <PrivateRoute>
-                    <UserAccountDetails />
+                    <Business />
                   </PrivateRoute>
                 }
               />

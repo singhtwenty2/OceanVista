@@ -10,7 +10,8 @@ app = Flask(__name__)
 # Redis connection
 redis_client = redis.Redis(host='localhost', port=7040, decode_responses=True)
 
-
+# OpenWeather API Key
+API_KEY = "8ecf8274dfb241d5ade161716241711"
 
 # Beach data
 BEACHES = [

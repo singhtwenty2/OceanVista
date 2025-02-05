@@ -38,7 +38,7 @@ fun ProfileCard(
         ) {
             ProfilePicture(imageUrl = "https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
             Spacer(modifier = Modifier.height(16.dp))
-            ProfileNameSection(name = profile.profile.name, userName = profile.profile.userName)
+            profile.profile.name?.let { ProfileNameSection(name = it, userName = profile.profile.userName) }
             Spacer(modifier = Modifier.height(24.dp))
             ProfileDetails(profile)
         }

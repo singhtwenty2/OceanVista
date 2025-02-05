@@ -18,10 +18,12 @@ fun ProfileDetails(profile: ProfileState) {
             icon = Icons.Default.Email,
             text = profile.profile.email
         ),
-        ProfileDetailItem(
-            icon = Icons.Default.Phone,
-            text = profile.profile.mobileNumber
-        ),
+        profile.profile.mobileNumber?.let {
+            ProfileDetailItem(
+                icon = Icons.Default.Phone,
+                text = it
+            )
+        },
         ProfileDetailItem(
             icon = Icons.Default.Person,
             text = "Notification Preference: ${profile.profile.notificationPrefrence}"
@@ -29,10 +31,12 @@ fun ProfileDetails(profile: ProfileState) {
     )
 
     detailItems.forEachIndexed { index, item ->
-        ProfileDetailItemView(
-            icon = item.icon,
-            text = item.text
-        )
+        item?.let {
+            ProfileDetailItemView(
+                icon = it.icon,
+                text = item.text
+            )
+        }
         if (index < detailItems.size - 1) {
             Spacer(modifier = Modifier.height(12.dp))
         }

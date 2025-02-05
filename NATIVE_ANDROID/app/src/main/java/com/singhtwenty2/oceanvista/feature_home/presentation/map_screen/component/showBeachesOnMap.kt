@@ -41,10 +41,10 @@ fun showBeachesOnMap(
     }
 
     if (beaches.isNotEmpty()) {
-        val firstBeach = beaches.first()
+        beaches.first()
         googleMap.moveCamera(
             CameraUpdateFactory.newLatLngZoom(
-                LatLng(12.58396, 77.572405),
+                LatLng(13.089484, 77.546149),
                 10f
             )
         )

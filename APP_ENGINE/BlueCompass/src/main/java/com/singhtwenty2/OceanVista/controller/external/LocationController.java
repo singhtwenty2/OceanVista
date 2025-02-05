@@ -9,6 +9,7 @@ import com.singhtwenty2.OceanVista.service.location.LocationProducer;
 import com.singhtwenty2.OceanVista.service.location.LocationService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class LocationController {
             @RequestBody UserLocationRequestDTO requestDTO,
             HttpServletRequest request
     ) {
-        String authHeader = request.getHeader("Authorization");
+        String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         String token = authHeader != null ? authHeader.substring(7).trim() : null;
         if (token == null) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(

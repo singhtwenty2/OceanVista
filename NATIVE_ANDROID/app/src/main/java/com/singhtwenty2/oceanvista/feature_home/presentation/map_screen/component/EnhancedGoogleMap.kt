@@ -36,8 +36,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.model.LatLng
 import com.singhtwenty2.oceanvista.feature_home.domain.model.dto.response.BeachColorCode
 
 @Composable
@@ -50,6 +52,10 @@ fun EnhancedGoogleMap(
     val context = LocalContext.current
     val mapView = remember { MapView(context) }
     var googleMap by remember { mutableStateOf<GoogleMap?>(null) }
+
+    val bengaluruLocation = remember {
+        LatLng(13.089484, 77.546149)
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         AndroidView(
@@ -101,7 +107,14 @@ fun EnhancedGoogleMap(
                 }
 
                 FloatingActionButton(
-                    onClick = { /* Implement location tracking */ },
+                    onClick = {
+                        googleMap?.animateCamera(
+                            CameraUpdateFactory.newLatLngZoom(
+                                bengaluruLocation,
+                                17f
+                            )
+                        )
+                    },
                     modifier = Modifier.size(48.dp),
                     containerColor = MaterialTheme.colorScheme.secondaryContainer
                 ) {

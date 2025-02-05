@@ -1,8 +1,8 @@
 export const chartData = [
-    { name: 'Jan', bookings: 65, revenue: 4000 },
-    { name: 'Feb', bookings: 78, revenue: 4800 },
-    { name: 'Mar', bookings: 82, revenue: 5200 },
-    { name: 'Apr', bookings: 95, revenue: 6000 },
-    { name: 'May', bookings: 110, revenue: 7200 },
-    { name: 'Jun', bookings: 102, revenue: 6800 },
-  ];
+  { name: 'Jan', bookings: 145, revenue: 320000 },
+  { name: 'Feb', bookings: 178, revenue: 480000 },
+  { name: 'Mar', bookings: 192, revenue: 520000 },
+  { name: 'Apr', bookings: 205, revenue: 600000 },
+  { name: 'May', bookings: 230, revenue: 720000 },
+  { name: 'Jun', bookings: 242, revenue: 680000 },
+];

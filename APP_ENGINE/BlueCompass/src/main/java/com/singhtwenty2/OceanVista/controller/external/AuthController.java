@@ -99,6 +99,7 @@ public class AuthController {
         if(response == null) {
             ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new UserDetailResponseDTO());
         }
+        System.out.println("\n\n\n*****About Profile Triggered****");
         return ResponseEntity.ok(response);
     }
 }
